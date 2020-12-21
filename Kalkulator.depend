@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1608522862 source:c:\users\akbar\documents\tugas\semester 3\sistem digital\final project\kalkulator\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
