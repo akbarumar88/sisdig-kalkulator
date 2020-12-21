@@ -26,6 +26,18 @@ int main()
                 pembagian();
                 break;
 
+            case '%':
+                modulus();
+                break;
+
+            case '^':
+                pangkat();
+                break;
+
+            case '!':
+                faktorial();
+                break;
+
             case 'c':
             case 'C':
                 system("cls");
@@ -61,6 +73,9 @@ void tampilkanInfo() {
     printf("Input simbol - untuk pengurangan \n");
     printf("Input simbol * untuk perkalian \n");
     printf("Input simbol / untuk pembagian \n");
+    printf("Input simbol %s untuk modulus \n", "%");
+    printf("Input simbol ^ untuk pangkat \n");
+    printf("Input simbol ! untuk faktorial \n");
 }
 
 void penjumlahan() {
@@ -106,4 +121,33 @@ void pembagian() {
 
     hasil = angka_1/angka_2;
     printf("Hasil pembagian adalah : %.2f\n", hasil);
+}
+
+void modulus() {
+    int angka_1, angka_2, hasil;
+    printf("\nInputkan angka pertama : "); scanf("%i", &angka_1);
+    printf("Inputkan angka kedua : "); scanf("%i", &angka_2);
+
+    hasil = angka_1 % angka_2;
+    printf("Hasil modulus adalah : %i\n", hasil);
+}
+
+void pangkat() {
+    int angka, pangkat;
+    float hasil;
+    printf("\nInputkan angka yang ingin dipangkatkan : "); scanf("%i", &angka);
+    printf("Inputkan pangkat : "); scanf("%i", &pangkat);
+
+    hasil = pow(angka, pangkat);
+    printf("Hasil pangkat adalah : %.1f\n", hasil);
+}
+
+void faktorial() {
+    long int angka, faktorial=1;
+    printf("\nInputkan angka untuk faktorial : "); scanf("%li", &angka);
+
+    for (int i=angka; i>=1; i--) {
+        faktorial *= i;
+    }
+    printf("Hasil faktorial adalah : %li\n", faktorial);
 }
