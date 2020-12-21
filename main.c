@@ -81,8 +81,29 @@ void penjumlahan() {
     printf("Hasil penjumlahan adalah : %i\n", sum);
 }
 
-void pengurangan() {}
+void pengurangan() {
+    int angka_1, angka_2, hasil;
+    printf("\nInputkan angka pertama : "); scanf("%i", &angka_1);
+    printf("Inputkan angka kedua : "); scanf("%i", &angka_2);
 
-void perkalian() {}
+    hasil = angka_1-angka_2;
+    printf("Hasil pengurangan adalah : %i\n", hasil);
+}
 
-void pembagian() {}
+void perkalian() {
+    int angka_1, angka_2, hasil;
+    printf("\nInputkan angka pertama : "); scanf("%i", &angka_1);
+    printf("Inputkan angka kedua : "); scanf("%i", &angka_2);
+
+    hasil = angka_1*angka_2;
+    printf("Hasil perkalian adalah : %i\n", hasil);
+}
+
+void pembagian() {
+    float angka_1, angka_2, hasil;
+    printf("\nInputkan angka pertama : "); scanf("%f", &angka_1);
+    printf("Inputkan angka kedua : "); scanf("%f", &angka_2);
+
+    hasil = angka_1/angka_2;
+    printf("Hasil pembagian adalah : %.2f\n", hasil);
+}
