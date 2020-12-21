@@ -38,6 +38,10 @@ int main()
                 faktorial();
                 break;
 
+            case '\\':
+                akarPangkatDua();
+                break;
+
             case 'c':
             case 'C':
                 system("cls");
@@ -74,8 +78,9 @@ void tampilkanInfo() {
     printf("Input simbol * untuk perkalian \n");
     printf("Input simbol / untuk pembagian \n");
     printf("Input simbol %s untuk modulus \n", "%");
-    printf("Input simbol ^ untuk pangkat \n");
+    printf("Input simbol ^ untuk perpangkatan \n");
     printf("Input simbol ! untuk faktorial \n");
+    printf("Input simbol \\ untuk mencari akar pangkat dua \n");
 }
 
 void penjumlahan() {
@@ -150,4 +155,12 @@ void faktorial() {
         faktorial *= i;
     }
     printf("Hasil faktorial adalah : %li\n", faktorial);
+}
+
+void akarPangkatDua() {
+    int angka;
+    float hasil;
+    printf("\nInputkan angka untuk dicari akarnya : "); scanf("%i", &angka);
+    hasil = sqrt(angka);
+    printf("Hasil akar pangkat dua adalah : %.1f\n", hasil);
 }
